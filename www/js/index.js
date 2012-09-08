@@ -9,15 +9,28 @@ var app = {
         var update = function() {
             var minutes = parseInt($('#minutes_idling').val());
 
-            var price_of_gasoline = 1.50;
+            var price_of_gasoline = parseFloat($('#price_of_gasoline').val());
 
-            var gasoline_cost = (0.02 * minutes * price_of_gasoline).toFixed(2);
+            var gasoline_cost = (0.04 * minutes * price_of_gasoline).toFixed(2);
             $('.gasoline_cost_value').text(gasoline_cost);
+
+            var fine = (minutes < 3 ? 0.00 : 179.00).toFixed(2);
+            $('.fine').text(fine);
+
+            var carbon_emissions = (8.721 * minutes).toFixed(2);
+            $('.carbon_emissions').text(carbon_emissions);
         };
 
         $('#minutes_idling').live('change', function() {
             update();
-        }).change();
+        });
+
+        $('#price_of_gasoline').live('change', function() {
+            update();
+        });
+
+
+        update();
 
     },
     bind: function() {

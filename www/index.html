@@ -20,19 +20,36 @@
             <div data-role="content">   
                 <label for="minutes_idling">Minutes idling:</label>
                 <input type="range" name="minutes_idling" id="minutes_idling" value="10" min="0" max="60" /> 
+                <label for="price_of_gasoline">
+                    Price of Gasoline
+                </label>
+                <input name="price_of_gasoline" id="price_of_gasoline" value="1.50" type="text">
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading">
                         Harmful Effects
                     </li>
                     <li data-theme="c">
-                        <a href="#gasoline_cost" data-transition="slide">
-                            Gasoline cost
-                            <span class="ui-li-count">
-                                $<span class="gasoline_cost_value">6.00</span>
-                            </span>
-                        </a>
+                        Gasoline Cost
+                        <span class="ui-li-count">
+                            $<span class="gasoline_cost_value"></span>
+                        </span>
+
+                    </li>
+                    <li data-theme="c">
+                        City of Montreal Fine
+                        <span class="ui-li-count">
+                            $<span class="fine"></span>
+                        </span>
+                    </li>
+                    <li data-theme="c">
+                        Carbon Emissions
+                        <span class="ui-li-count">
+                            <span class="carbon_emissions"></span> g
+                        </span>
                     </li>
                 </ul>
+                <p>
+                    <strong>Tip:</strong> In the winter, an electric seat warmer is a much more effective way to heat your car than idling.
             </div><!-- /content -->
         </div><!-- /page -->
 
