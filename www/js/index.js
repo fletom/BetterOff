@@ -5,6 +5,20 @@ var app = {
         document.ontouchmove = function(event){
             event.preventDefault();
         }
+
+        var update = function() {
+            var minutes = parseInt($('#minutes_idling').val());
+
+            var price_of_gasoline = 1.50;
+
+            var gasoline_cost = (0.02 * minutes * price_of_gasoline).toFixed(2);
+            $('.gasoline_cost_value').text(gasoline_cost);
+        };
+
+        $('#minutes_idling').live('change', function() {
+            update();
+        }).change();
+
     },
     bind: function() {
         document.addEventListener('deviceready', this.deviceready, false);

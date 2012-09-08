@@ -10,6 +10,7 @@
         <title>Better Off</title>
     </head>
     <body>
+        <!-- Main Page -->
         <div data-role="page" id="main">
 
             <div data-role="header">
@@ -21,17 +22,31 @@
                 <input type="range" name="minutes_idling" id="minutes_idling" value="10" min="0" max="60" /> 
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading">
-                        Effects
+                        Harmful Effects
                     </li>
                     <li data-theme="c">
                         <a href="#gasoline_cost" data-transition="slide">
                             Gasoline cost
                             <span class="ui-li-count">
-                                $6.00
+                                $<span class="gasoline_cost_value">6.00</span>
                             </span>
                         </a>
                     </li>
                 </ul>
+            </div><!-- /content -->
+        </div><!-- /page -->
+
+
+        <!-- Gasoline Cost -->
+        <div data-role="page" id="gasoline_cost">
+
+            <div data-role="header">
+                <a data-rel="back" data-icon="arrow-l">Back</a>
+                <h1>BetterOff</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">   
+                <p>$<span class="gasoline_cost_value">6.00</span></p>
             </div><!-- /content -->
         </div><!-- /page -->
         <script type="text/javascript" src="cordova-2.0.0.js"></script>
